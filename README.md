@@ -1,4 +1,4 @@
-# ABM Data Coding Challenge
+# ABM Data
 
 ## EDIFACT Message Parser
 
