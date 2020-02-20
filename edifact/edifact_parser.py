@@ -113,7 +113,7 @@ class EdifactParser:
 # Program driver
 if __name__ == '__main__':
 
-    _filename = 'msg.txt'  # filename containing edifact message
+    _filename = 'edifact/msg.txt'  # filename containing edifact message
     _seg_id = 'LOC'  # filtering segments by
     _delimiter = '+'  # elements separated by
     _indexes = [1, 2]  # get second and third elements from matching segments
