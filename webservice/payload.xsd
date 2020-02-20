@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="InputDocument" type="InputDocumentType"/>
+  <xs:complexType name="DeclarationHeaderType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="Jurisdiction"/>
+      <xs:element type="xs:string" name="CWProcedure"/>
+      <xs:element type="xs:string" name="DeclarationDestination"/>
+      <xs:element type="xs:string" name="DocumentRef"/>
+      <xs:element type="xs:string" name="SiteID"/>
+      <xs:element type="xs:string" name="AccountCode"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DeclarationType">
+    <xs:sequence>
+      <xs:element type="DeclarationHeaderType" name="DeclarationHeader"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="Command"/>
+    <xs:attribute type="xs:string" name="Version"/>
+  </xs:complexType>
+  <xs:complexType name="DeclarationListType">
+    <xs:sequence>
+      <xs:element type="DeclarationType" name="Declaration"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InputDocumentType">
+    <xs:sequence>
+      <xs:element type="DeclarationListType" name="DeclarationList"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
