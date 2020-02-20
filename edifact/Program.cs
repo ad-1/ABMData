@@ -45,7 +45,6 @@ namespace ABMData
         // split segment into elements and if 'LOC' segment get elements at specified index
         static void SplitSegment(string segment, string segId, int[] indexes, Regex pattern)
         {
-            
             List<string> elemList = pattern.Replace(segment, "\'\\n").Split('+').ToList();
             if (elemList[0] == segId)
             {
